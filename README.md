@@ -21,7 +21,7 @@ The script extracts data from multiple file formats (CSV, JSON, XML), transforms
 
 2.  Navigate to the project directory:
     ```bash
-    cd Data_practice_exercises/ETL_easy
+    cd Data_practice_exercises
     ```
 
 3.  Download source data:
@@ -58,7 +58,7 @@ This script performs web scraping to extract information about the top 50 highly
 
 1.  Navigate to the project directory:
     ```bash
-    cd Data_practice_exercises/Web_scraping
+    cd Data_practice_exercises
     ```
 
 2.  Install the required libraries:
