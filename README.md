@@ -1,7 +1,7 @@
 # Data sciencie exercices
 These are a set of exercices designed to practice data engineering concepts acquired in recent courses.
 
-## ETL Practice Exercise
+## ETL exercise 1: `etl_code.py`
 
 This is an introductory ETL (Extract, Transform, Load) project in Python, designed to practice data engineering concepts acquired in recent courses.
 
@@ -45,31 +45,44 @@ After running the script, the following files will be generated in the  director
 * **transformed_data.csv**: This file contains the final processed data, ready to be loaded into a database.
 * **log_file.txt**: This text file contains the timestamped logs of the ETL process (e.g., when extraction started, when transformation ended).
 
-## Web scraping
+## ETL exercise 2: `etl_project_gdp.py`
+
+Second ETL  project in Python with the next objetive:
+
+1. Write a data extraction function to retrieve the relevant information from [the required URL]('https://web.archive.org/web/20230902185326/https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29').
+2. Transform the available GDP information into 'Billion USD' from 'Million USD'.
+3. Load the transformed information to the required CSV file and as a database file.
+4. Run the required query on the database.
+5. Log the progress of the code with appropriate timestamps.
+
+### Libraries
+- requests - The library used for accessing the information from the URL.
+- bs4 - The library containing the BeautifulSoup function used for webscraping.
+- pandas - The library used for processing the extracted data, storing it to required formats and communicating with the databases.
+- sqlite3 - The library required to create a database server connection.
+- numpy - The library required for the mathematical rounding operation as required in the objectives.
+- datetime - The library containing the function datetime used for extracting the timestamp for logging purposes.
+
+
+### Generated Files
+
+After running the script, the following files will be generated in the directory:
+
+* **Countries_by_GDP.csv**: A CSV file containing the final processed list of countries and their GDP in Billions USD.
+* **World_Economies.db**: A SQLite database containing the table `Countries_by_GDP`.
+* **etl_project_log.txt**: A text file recording the timestamped progress of the ETL operations (e.g., extraction complete, transformation started).
+
+
+
+
+## Web scraping exercise 1
 
 This script performs web scraping to extract information about the top 50 highly-ranked films from a web archive. It uses the `BeautifulSoup` library to parse HTML content, creates a structured DataFrame, and stores the resulting data in both a CSV file and a SQLite database.
 
-### Prerequisites
-
-* Python
-* Libraries: `pandas`, `beautifulsoup4`, `requests`
-
-### Usage
-
-1.  Navigate to the project directory:
-    ```bash
-    cd Data_practice_exercises
-    ```
-
-2.  Install the required libraries:
-    ```bash
-    python3 -m pip install pandas beautifulsoup4 requests
-    ```
-
-3.  Execute the Python script:
-    ```bash
-    python3 web_scraping.py
-    ```
+### Libraries
+* pandas
+* beautifulsoup4
+* requests
 
 ### Generated Files
 
