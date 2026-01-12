@@ -92,3 +92,34 @@ After running the script, the following files will be generated in the directory
 * **Movies.db**: A SQLite database file containing a table named `Top_50` with the scraped data.
 
 
+
+
+## Final proyect: `banks_project.py`
+
+This project performs ETL operations to compile a list of the top 10 largest banks in the world by market capitalization (in Billions USD). The script scrapes data from a web archive, converts the market capitalization into multiple currencies (GBP, EUR, INR) using exchange rate data, and stores the results locally.
+
+### Objectives
+1. **Extract** real-world data from a Wikipedia archive URL using Web Scraping.
+2. **Transform** the data by converting Market Cap (USD) to GBP, EUR, and INR using exchange rate information from a local CSV file (`exchange_rate.csv`).
+3. **Load** the processed data into a CSV file and a SQLite database.
+4. **Query** the database to retrieve specific insights (e.g., average market cap in GBP).
+5. **Log** the entire process with timestamps.
+
+### Usage
+
+Download exchange_rate.csv and run banks_project.py.
+
+### Libraries
+* **requests**: To fetch the HTML content of the webpage.
+* **bs4 (BeautifulSoup)**: To parse the HTML and extract table data.
+* **pandas**: To manage dataframes, handle CSV I/O, and interact with the database.
+* **sqlite3**: To manage the SQL database connection.
+* **numpy**: For mathematical operations (rounding).
+* **datetime**: For logging timestamps.
+
+### Generated Files
+After running the script, the following files will be generated:
+
+* **Largest_banks_data.csv**: A CSV file containing the bank names and their market capitalization in USD, GBP, EUR, and INR.
+* **Banks.db**: A SQLite database containing the table `Largest_banks`.
+* **code_log.txt**: A text file tracking the progress of the ETL pipeline.
